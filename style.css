@@ -1,0 +1,137 @@
+/* Meng-import font dari google font */
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700;800;900&display=swap');
+
+body {
+    font-family: 'Gabarito', cursive;
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+
+    /* Jika ingin menggunakan warna sebagai background element */
+    /* Gunakan properti background-color */
+    
+
+
+    /* Jika ingin menggunakan gambar sebagai Background */
+    /* Gunakan properti background-image */
+    background-image: url(asset/P.jpg);
+    background-size: contain;
+    background-attachment: fixed;
+    background-repeat: repeat;
+    background-position: center; 
+
+    /* Mengatur tata Letak element dengan Flexbox
+    /* Posisi Element: tengah */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+/* Set the Container Style */
+.container {
+/* Set width of the container */
+width: 91%;
+max-width: 680px;
+margin: 10px;
+padding: 50px 0px 100px 0px;
+/* Mengatur tata letak element dengan Flexbox */
+/* Posisi Element: tengah */
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+/* Set the profile image */
+.img-container img { 
+    width: 150px;
+    border-radius: 60%;
+}
+
+
+/* Set the title and description */
+.title-container {
+/* Tata Letak */
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-bottom: 40px;
+/* Warna Text Heading dan Deskripsi */
+ color:#E6C62F;
+}
+
+
+
+/* Set the icon */
+.icon {
+    margin: 3px 8px;
+    width:  44px;
+    height: 44px;
+}
+
+/* coba ke tengahin dikit <p> */
+.link-item p {
+    margin-right: 60px;
+}
+
+
+
+
+
+/* Apa yang akan terjadi jika Mouse berada di atas element "/
+/* Itulah yang disebut dengan sifat hover */
+
+.link-item {
+    height: 56px;
+    width: 100%;
+    position: relative;
+    background-color: transparent;
+    cursor: pointer;
+    border: 2px solid #252525;
+    margin: 16px;
+    overflow: hidden;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.5s ease-in-out;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .link-item {
+    z-index: 1;
+    font-weight: 800;
+    letter-spacing: 4px;
+  }
+  
+  .type1::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.5s ease-in-out;
+    background-color: #333;
+    border-radius: 30px;
+    visibility: hidden;
+    height: 10px;
+    width: 10px;
+    z-index: -1;
+  }
+  
+  .link-item:hover {
+    box-shadow: 1px 1px 200px #252525;
+    color: #fff;
+    border: none;
+    transition: cubic-bezier(.07, 1.41, 82, 1.41) 0.2s;
+    transform: scale(1.02);
+
+    background-color: rgb(72, 66, 66);
+  }
+  
+  .type1:hover::after {
+    visibility: visible;
+    transform: scale(100) translateX(2px);
+  }
